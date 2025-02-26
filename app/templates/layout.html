@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .text_overlay {
+                position: absolute;
+                background-color: rgba(229, 229, 229, 0.802);
+            }
+            </style>
+        <title>{% block title %}What - {% endblock %}</title>
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+        <footer>
+            <p>2025 &copy; Нияз Ахметов</p> 
+        </footer>
+        <br><br><br>
+        <form action="{{ url_for('main.osu') }}">
+            <button type="submit">???</button>
+        </form>
+    </body>
+</html>

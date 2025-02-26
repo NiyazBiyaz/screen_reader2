@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Main{% endblock %}
+
+{% block content %}
+    <form action="/uploading" method="post" enctype="multipart/form-data">
+        <label for="photo">Выбери скришот:</label>
+        <input type="file" id="photo" name="photo" accept="image/png, image/jpeg, image/jpg" required>
+        <br><br>
+        <button type="submit">Отправить</button>
+    </form>
+{% endblock %}

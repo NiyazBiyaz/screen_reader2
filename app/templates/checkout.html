@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% macro overlayed_text(text, top, left) %}
+<div class="text_overlay" style="top: {{ top }}%; left: {{ left }}%">{{ text }}</div>
+{% endmacro %}
+
+
+{% block title %}Проверка результата{% endblock %}
+
+{% block content %}
+<div style="position: relative; display: inline-block;">
+    <img src={{ url_for("main.uploaded_file", filename=image)}} style="width: 100%;" alt="Screenshot">
+    {% for i in data.len %}
+        {{ overlayed_text(data.text[i], data.top[i], data.left[i]) }}
+    {% endfor %}</div>
+{% endblock %}
